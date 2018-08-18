@@ -1,0 +1,43 @@
+﻿@model KisiselBerkeKurnaz.Models.TBL_KULLANICI
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_YoneticiLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TBL_KULLANICI</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KULLANICIADI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KULLANICIADI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SIFRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SIFRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YETKI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YETKI)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

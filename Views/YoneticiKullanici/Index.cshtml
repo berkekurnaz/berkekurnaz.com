@@ -1,0 +1,50 @@
+﻿@model IEnumerable<KisiselBerkeKurnaz.Models.TBL_KULLANICI>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_YoneticiLayout.cshtml";
+}
+
+<h2>Kullanıcılar Listesi</h2>
+
+<p>
+    @Html.ActionLink("Yeni Kullanıcı Oluştur", "Create")
+</p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.KULLANICIADI)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SIFRE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YETKI)
+            </th>
+            <th>
+                İşlemler Menüsü
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KULLANICIADI)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SIFRE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.YETKI)
+                </td>
+                <td>
+                    @Html.ActionLink("Düzenle", "Edit", new { id = item.ID }, new { @class="btn btn-primary" })
+                    @Html.ActionLink("Sil", "Delete", new { id = item.ID }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

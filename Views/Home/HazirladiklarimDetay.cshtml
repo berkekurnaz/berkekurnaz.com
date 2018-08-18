@@ -1,0 +1,20 @@
+﻿@model KisiselBerkeKurnaz.Models.TBL_HAZIRLADIKLARIM
+
+@{
+    ViewBag.Title = "Hazırladıklarım";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<center>
+    <br /><br /><br /><br /><br /><br />
+    <h2>@Model.AD</h2>
+    <p>@Model.TANITIM</p>
+    <img src="@Model.FOTOGRAF" alt="@Model.AD" width="350" class="img-responsive img-fluid" />
+</center>
+
+<div class="container">
+    <hr />
+    @Html.Raw(Model.ACIKLAMA)
+    <hr />
+</div>
+

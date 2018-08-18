@@ -1,0 +1,44 @@
+﻿@model IEnumerable<KisiselBerkeKurnaz.Models.TBL_HAZIRLADIKLARIM>
+
+@{
+    ViewBag.Title = "Hazirladiklarim";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Portfolio Grid Section -->
+<section class="portfolio" id="portfolio" style="margin-top:30px;">
+    <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">HAZIRLADIKLARIM</h2>
+        <hr class="star-dark mb-5">
+        <div class="row">
+
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="@item.FOTOGRAF" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">@item.AD</h4>
+                            <p class="card-text">@item.TANITIM</p>
+                            <center><a href="/Home/HazirladiklarimDetay/@item.ID" class="btn btn-primary">Devamını İncele</a></center>
+                        </div>
+                    </div><br />
+                </div>
+            }
+
+            @*<div class="col-md-4">
+            <div class="card">
+                <img class="card-img-top" src="http://via.placeholder.com/350x200" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Kayboluş</h4>
+                    <p class="card-text">Türkiyenin İlk 3D Hikaye Modlu Eğitim Oyunu...</p>
+                    <center><a href="#" class="btn btn-primary">Devamını İncele</a></center>
+                </div>
+            </div><br />
+        </div>*@
+
+
+        </div>
+    </div>
+</section>
+

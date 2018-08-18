@@ -1,0 +1,65 @@
+﻿@model KisiselBerkeKurnaz.Models.TBL_ORTAKOL
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_YoneticiLayout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>TBL_ORTAKOL</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TANITIM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TANITIM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YATIRIMCI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YATIRIMCI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EKIPARKADAS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EKIPARKADAS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PROJEORTAK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PROJEORTAK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.REKLAMVEREN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.REKLAMVEREN)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

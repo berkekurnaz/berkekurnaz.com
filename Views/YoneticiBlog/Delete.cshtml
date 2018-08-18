@@ -1,0 +1,49 @@
+﻿@model KisiselBerkeKurnaz.Models.TBL_BLOG
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_YoneticiLayout.cshtml";
+}
+
+<h2 style="text-align:center">Yazı Silme Ekranı</h2>
+
+<h3>Silmek İstediğine Emin Misin?</h3>
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BASLIK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BASLIK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TARIH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TARIH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ICERIK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ICERIK)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-primary" /> <br /><br />
+            @Html.ActionLink("Geriye Dön", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,107 @@
+﻿@model IEnumerable<KisiselBerkeKurnaz.Models.TBL_ORTAKOL>
+
+@{
+    ViewBag.Title = "OrtakOl";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="bg-primary text-white mb-0" id="about" style="margin-top:30px;">
+    <div class="container">
+        <h2 class="text-center text-uppercase text-white">Ortak Ol</h2>
+        <hr class="star-light mb-5">
+        <p class="lead">
+            @foreach (var item in Model)
+            {
+                @item.TANITIM
+            }
+        </p>
+
+        <div class="text-center mt-4">
+            <a class="btn btn-xl btn-outline-light" href="/Home/Hazirladiklarim/">
+                <i class="fa fa-download mr-2"></i>
+                Hazırladıklarımı İncele
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="bg-white text-black mb-0" id="about" style="margin-top:30px;">
+    <div class="container">
+        <h2 class="text-center text-uppercase text-black">Yatırımcı Ortaklığı</h2>
+        <hr class="star-dark mb-5">
+        <p class="lead">
+            @foreach (var item in Model)
+            {
+                @item.YATIRIMCI
+            }
+        </p>
+
+        <div class="text-center mt-4">
+            <a class="btn btn-xl btn-outline-dark" href="/Home/Iletisim/">
+                <i class="fa fa-download mr-2"></i>
+                Yatırımcı Ol
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="bg-primary text-white mb-0" id="about" style="margin-top:30px;">
+    <div class="container">
+        <h2 class="text-center text-uppercase text-white">EKİP Arkadaşımız Ol</h2>
+        <hr class="star-light mb-5">
+        <p class="lead">
+            @foreach (var item in Model)
+            {
+                @item.EKIPARKADAS
+            }
+        </p>
+
+        <div class="text-center mt-4">
+            <a class="btn btn-xl btn-outline-light" href="/Home/EkipKatil/">
+                <i class="fa fa-download mr-2"></i>
+                Takımımıza Katıl
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="bg-white text-black mb-0" id="about" style="margin-top:30px;">
+    <div class="container">
+        <h2 class="text-center text-uppercase text-black">Proje Ortaklığı</h2>
+        <hr class="star-dark mb-5">
+        <p class="lead">
+            @foreach (var item in Model)
+            {
+                @item.PROJEORTAK
+            }
+        </p>
+
+        <div class="text-center mt-4">
+            <a class="btn btn-xl btn-outline-dark" href="/Home/Iletisim/">
+                <i class="fa fa-download mr-2"></i>
+                Proje Ortağı Ol
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<section class="bg-primary text-white mb-0" id="about" style="margin-top:30px;">
+    <div class="container">
+        <h2 class="text-center text-uppercase text-white">Reklam Veren Ol</h2>
+        <hr class="star-light mb-5">
+        <p class="lead">
+            @foreach (var item in Model)
+            {
+                @Html.Raw(item.REKLAMVEREN)
+            }
+        </p>
+
+        <div class="text-center mt-4">
+            <a class="btn btn-xl btn-outline-light" href="/Home/Iletisim/">
+                <i class="fa fa-download mr-2"></i>
+                Reklam Veren Ol
+            </a>
+        </div>
+    </div>
+</section>

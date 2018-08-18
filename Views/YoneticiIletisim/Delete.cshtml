@@ -1,0 +1,58 @@
+﻿@model KisiselBerkeKurnaz.Models.TBL_ILETISIM
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_YoneticiLayout.cshtml";
+}
+
+<h2 style="text-align:center">Mesaj Silme Ekranı</h2>
+
+<h3>Mesajı Silmek İstediğine Emin Misin?</h3>
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ADSOYAD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ADSOYAD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MAIL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MAIL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TELEFON)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TELEFON)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MESAJ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MESAJ)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-primary" /> <br /><br />
+            @Html.ActionLink("Geriye Dön", "Index")
+        </div>
+    }
+</div>

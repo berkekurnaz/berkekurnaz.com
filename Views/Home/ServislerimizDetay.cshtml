@@ -1,0 +1,21 @@
+﻿@model KisiselBerkeKurnaz.Models.TBL_PAKETLER
+
+@{
+    ViewBag.Title = "Servislerimiz";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<center>
+    <br /><br /><br /><br /><br /><br />
+    <h2>@Model.PAKETAD</h2>
+    <p>@Model.PAKETTANITIM</p>
+    <p>@Model.PAKETFIYAT</p>
+    <img src="@Model.PAKETFOTOGRAF" alt="@Model.PAKETFOTOGRAF" width="350" class="img-responsive img-fluid" />
+</center>
+
+<div class="container">
+    <hr />
+    @Html.Raw(Model.PAKETACIKLAMA)
+    <hr />
+</div>
+

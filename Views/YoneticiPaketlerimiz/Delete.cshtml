@@ -1,0 +1,64 @@
+﻿@model KisiselBerkeKurnaz.Models.TBL_PAKETLER
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_YoneticiLayout.cshtml";
+}
+
+<h2>Paket Silme Bölümü</h2>
+
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PAKETAD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PAKETAD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PAKETTANITIM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PAKETTANITIM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PAKETACIKLAMA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PAKETACIKLAMA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PAKETFOTOGRAF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PAKETFOTOGRAF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PAKETFIYAT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PAKETFIYAT)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-primary" /> |
+            @Html.ActionLink("Geriye Dön", "Index")
+        </div>
+    }
+</div>

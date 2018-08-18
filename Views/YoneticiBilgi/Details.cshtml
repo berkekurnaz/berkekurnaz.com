@@ -1,0 +1,35 @@
+﻿@model KisiselBerkeKurnaz.Models.TBL_BILGI
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_YoneticiLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TBL_BILGI</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SITEADI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SITEADI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SITEACIKLAMA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SITEACIKLAMA)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,48 @@
+﻿@model IEnumerable<KisiselBerkeKurnaz.Models.TBL_HAKKIMDA>
+
+@{
+    ViewBag.Title = "BenKimim";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Ben Kimim Section -->
+<section class="bg-primary text-white mb-0" id="about" style="margin-top:30px;">
+    <div class="container">
+        <h2 class="text-center text-uppercase text-white">Ben KİMİM?</h2>
+        <hr class="star-light mb-5">
+        <p class="lead">
+            @foreach (var item in Model)
+            {
+                @Html.Raw(item.HAKKIMDA)
+            }
+        </p>
+        
+        <div class="text-center mt-4">
+            <a class="btn btn-xl btn-outline-light" href="/Home/Hazirladiklarim/">
+                <i class="fa fa-download mr-2"></i>
+                Hazırladıklarımı İncele
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- BK Oyun Section -->
+<section class="bg-white text-black mb-0" id="about" style="margin-top:30px;">
+    <div class="container">
+        <h2 class="text-center text-uppercase text-black">BK Oyun?</h2>
+        <hr class="star-dark mb-5">
+        <p class="lead">
+            @foreach (var item in Model)
+            {
+                @item.BKOYUN
+            }
+        </p>
+        
+        <div class="text-center mt-4">
+            <a class="btn btn-xl btn-outline-dark" href="/Home/BKOyun/">
+                <i class="fa fa-download mr-2"></i>
+                BK Oyun Sayfası
+            </a>
+        </div>
+    </div>
+</section>

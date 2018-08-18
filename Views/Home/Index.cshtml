@@ -1,0 +1,41 @@
+﻿@model IEnumerable<KisiselBerkeKurnaz.Models.TBL_BILGI>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<!-- Header -->
+<header class="masthead bg-primary text-white text-center">
+    <div class="container">
+        <img class="rounded-circle img-fluid img-thumbnail mb-5 d-block mx-auto" src="https://avatars3.githubusercontent.com/u/34648016?s=460&v=4" alt="Berke Kurnaz" width="300">
+        <h1 class="text-uppercase mb-0">
+            @foreach (var item in Model)
+            {
+                @item.SITEADI
+            }
+        </h1>
+        <hr class="star-light">
+        <h2 class="font-weight-light mb-0">
+            @foreach (var item in Model)
+            {
+                @item.SITEACIKLAMA
+            }
+        </h2>
+    </div>
+</header>
+
+
+<!-- Grid Section -->
+<section class="portfolio" id="portfolio">
+    <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">Burada Neler Bulunuyor ?</h2>
+        <hr class="star-dark mb-5">
+        <p class="text-center">Gerçekleri Söylemek Gerekirse Bazı Alanlarda Yazdığım Yazılar Dısında Pek Bir Şey Yok...</p>
+        <p class="text-center">Birde Simdiye Kadar Hazırladığım Bazı Seyleri Burada Yayınlıyorum.İncelemek İstersen Buralarda Bir Yerde...</p>
+        <p class="text-center">Ayrıca Benimle Ortak Olmak İstersen Burada Onunla İlgili Bir Bölümde Bulunuyor.</p>
+        <p class="text-center">Teknolojinin Güzel Yanlarını Kullanıp Kendine Oyun,Site,Uygulama Gelistirmek İstersen Yine Onuda Burada Yapabiliriz...</p>
+        <p class="text-center">Aklına Takılanları Bana Sormak İstersen Veya 'Merhaba' Demek İstersen İletisim Bölümünden Benimle İletisim Kurabilirsin...</p>
+    </div>
+</section>
+

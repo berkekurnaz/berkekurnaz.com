@@ -1,0 +1,49 @@
+﻿@model KisiselBerkeKurnaz.Models.TBL_KULLANICI
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_YoneticiLayout.cshtml";
+}
+
+<h2>Kullanıcı Silme Ekranı</h2>
+
+
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KULLANICIADI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KULLANICIADI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SIFRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SIFRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YETKI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YETKI)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-primary" /> <br /><br />
+            @Html.ActionLink("Geriye Dön", "Index")
+        </div>
+    }
+</div>

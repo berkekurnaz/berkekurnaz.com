@@ -1,0 +1,42 @@
+﻿@model KisiselBerkeKurnaz.Models.TBL_BLOG
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_YoneticiLayout.cshtml";
+}
+
+<h2 style="text-align:center">Yazı İnceleme Ekranı</h2>
+
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BASLIK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BASLIK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TARIH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TARIH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ICERIK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ICERIK)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Geriye Dön", "Index")
+</p>

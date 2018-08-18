@@ -1,0 +1,56 @@
+﻿@model KisiselBerkeKurnaz.Models.TBL_HAZIRLADIKLARIM
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_YoneticiLayout.cshtml";
+}
+
+<h2>Silme Ekranı</h2>
+
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TANITIM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TANITIM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ACIKLAMA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ACIKLAMA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FOTOGRAF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FOTOGRAF)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-primary" /> <br /><br />
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

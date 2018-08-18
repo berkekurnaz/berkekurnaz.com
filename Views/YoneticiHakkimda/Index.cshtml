@@ -1,0 +1,31 @@
+﻿@model IEnumerable<KisiselBerkeKurnaz.Models.TBL_HAKKIMDA>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_YoneticiLayout.cshtml";
+}
+
+<h2>Ben Kimim?</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.HAKKIMDA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BKOYUN)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.HAKKIMDA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BKOYUN)
+        </td>
+    </tr>
+}
+
+</table>

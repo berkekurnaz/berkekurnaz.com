@@ -1,0 +1,48 @@
+﻿@model IEnumerable<KisiselBerkeKurnaz.Models.TBL_PAKETLER>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_YoneticiLayout.cshtml";
+}
+
+<h2>Paketler Ana Sayfa</h2>
+
+<p>
+    @Html.ActionLink("Yeni Oluştur", "Create", null, new { @class = "btn btn-primary" })
+</p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PAKETAD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PAKETFOTOGRAF)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PAKETFIYAT)
+            </th>
+            <th>İşlemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PAKETAD)
+                </td>
+                <td>
+                    <center><img src="@item.PAKETFOTOGRAF" alt="resim" width="150" /></center>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PAKETFIYAT)
+                </td>
+                <td>
+                    @Html.ActionLink("Düzenle", "Edit", new { id = item.ID }, new { @class = "btn btn-primary" })
+                    @Html.ActionLink("Sil", "Delete", new { id = item.ID }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

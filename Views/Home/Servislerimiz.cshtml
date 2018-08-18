@@ -1,0 +1,95 @@
+﻿@model IEnumerable<KisiselBerkeKurnaz.Models.TBL_PAKETLER>
+
+@{
+    ViewBag.Title = "Servislerimiz";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section id="services" style="margin-top:30px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading text-uppercase">SERVİSLERİMİZ</h2>
+                <h3 class="section-subheading text-muted">Sizler İçin Hazırladığımız Bazı Ürünler</h3>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="service-heading">Oyun Geliştirme</h4>
+                <p class="text-muted">Geliştirmek İstediğiniz Bir Oyun Mu Var? İstediğiniz Oyunu Sizler İçin Hazırlıyoruz.</p>
+            </div>
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="service-heading">İnternet Siteleri</h4>
+                <p class="text-muted">İster Paketlerimizden Birini Seçin İsterseniz İstediğiniz İnternet Sitesini Sizin İçin Geliştirelim.</p>
+            </div>
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="service-heading">Uygulamalar</h4>
+                <p class="text-muted">Masaüstü Veya Mobil Uygulamalar.İsteğiniz Veya Hazır Sistemlerden Birini Seçin,Gerisi Bizde.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <section class="bg-primary text-black text-center" style="padding-top:20px;padding-bottom:20px;">
+        <div class="container">
+            <h2 class="text-center text-uppercase text-secondary mb-0">PAKETLERİMİZ</h2>
+            <hr class="star-light mb-5">
+            <div class="row">
+
+                @foreach (var item in Model)
+                {
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="@item.PAKETFOTOGRAF" alt="Card image" style="width:100%">
+                            <div class="card-body">
+                                <h4 class="card-title">@item.PAKETAD</h4>
+                                <p class="card-text">@item.PAKETTANITIM</p>
+                                <center><a href="/Home/ServislerimizDetay/@item.ID" class="btn btn-primary">Devamını İncele</a></center>
+                            </div>
+                        </div><br />
+                    </div>
+                }
+
+
+                @*<div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="http://via.placeholder.com/350x200" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Kayboluş</h4>
+                            <p class="card-text">Türkiyenin İlk 3D Hikaye Modlu Eğitim Oyunu...</p>
+                            <center><a href="#" class="btn btn-primary">Devamını İncele</a></center>
+                        </div>
+                    </div><br />
+                </div>*@
+
+
+            </div>
+        </div>
+    </section>
+
+
+<section id="services" style="margin-top:20px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading text-uppercase">Paketlerde İSTEDİĞİM Bulunmuyor</h2><hr />
+                <h5 class="section-subheading text-muted">Benimle İletişim Bölümünden İletişim Kurabilir Ve İstediğin Ürünü Sizler İçin Yapabiliriz.</h5>
+            </div>
+        </div>
+        
+    </div>
+</section>
+

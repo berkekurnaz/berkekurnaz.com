@@ -1,0 +1,49 @@
+﻿@model IEnumerable<KisiselBerkeKurnaz.Models.TBL_ORTAKOL>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_YoneticiLayout.cshtml";
+}
+
+<h2>Ortak Ol</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TANITIM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YATIRIMCI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EKIPARKADAS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PROJEORTAK)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REKLAMVEREN)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TANITIM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YATIRIMCI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EKIPARKADAS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PROJEORTAK)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REKLAMVEREN)
+        </td>
+    </tr>
+}
+
+</table>

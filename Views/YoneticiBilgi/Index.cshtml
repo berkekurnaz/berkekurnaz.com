@@ -1,0 +1,31 @@
+﻿@model IEnumerable<KisiselBerkeKurnaz.Models.TBL_BILGI>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_YoneticiLayout.cshtml";
+}
+
+<h2>Site Bilgileri</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SITEADI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SITEACIKLAMA)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SITEADI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SITEACIKLAMA)
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,44 @@
+﻿@model IEnumerable<KisiselBerkeKurnaz.Models.TBL_BLOG>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_YoneticiLayout.cshtml";
+}
+
+<h2 style="text-align:center">Blog Yazıları Ana Sayfa</h2>
+
+<p>
+    @Html.ActionLink("Yeni Yazı Oluştur", "Create",null,new { @class="btn btn-primary" })
+</p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BASLIK)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TARIH)
+            </th>
+            <th>İşlemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BASLIK)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TARIH)
+                </td>
+                <td>
+                    @Html.ActionLink("Düzenle", "Edit", new { id = item.ID } , new { @class="btn btn-warning" }) 
+                    @Html.ActionLink("İncele", "Details", new { id = item.ID }, new { @class = "btn btn-primary" }) 
+                    @Html.ActionLink("Sil", "Delete", new { id = item.ID }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

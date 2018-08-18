@@ -1,0 +1,47 @@
+﻿@model IEnumerable<KisiselBerkeKurnaz.Models.TBL_ILETISIM>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_YoneticiLayout.cshtml";
+}
+
+<h2 style="text-align:center">İletişim Mesajları Ana Sayfa</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ADSOYAD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MAIL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TELEFON)
+            </th>
+            <th>
+                İşlemler
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ADSOYAD)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MAIL)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TELEFON)
+                </td>
+                <td>
+                    @Html.ActionLink("İncele", "Details", new { id = item.ID }, new { @class = "btn btn-primary" })
+                    @Html.ActionLink("Sil", "Delete", new { id = item.ID }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,23 @@
+﻿@model IEnumerable<KisiselBerkeKurnaz.Models.TBL_BLOG>
+
+@{
+    ViewBag.Title = "Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Grid Section -->
+<section class="portfolio" id="portfolio" style="margin-top:30px;">
+    <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">Blog</h2>
+        <hr class="star-dark mb-5">
+
+        @foreach (var item in Model)
+        {
+            <a href="/Home/BlogDetay/@item.ID" style="font-size:20px;">@item.BASLIK --- Eklenme Tarihi : @item.TARIH</a><br /><br />
+        }
+
+
+
+    </div>
+</section>
+
